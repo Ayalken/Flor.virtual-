@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to top, #87CEFA, #fff);
+    font-family: 'Arial', sans-serif;
+}
+
+.garden {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.sunflower {
+    position: relative;
+    animation: sway 2s infinite ease-in-out;
+}
+
+.stem {
+    width: 10px;
+    height: 150px;
+    background-color: green;
+    margin: 0 auto;
+    position: relative;
+}
+
+.leaf {
+    width: 40px;
+    height: 20px;
+    background-color: green;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.leaf-left {
+    left: -30px;
+    top: 50px;
+    transform: rotate(-45deg);
+}
+
+.leaf-right {
+    right: -30px;
+    top: 70px;
+    transform: rotate(45deg);
+}
+
+.flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 8s infinite linear;
+}
+
+.petal {
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.petal1 { transform: rotate(0deg) translate(50px); }
+.petal2 { transform: rotate(72deg) translate(50px); }
+.petal3 { transform: rotate(144deg) translate(50px); }
+.petal4 { transform: rotate(216deg) translate(50px); }
+.petal5 { transform: rotate(288deg) translate(50px); }
+
+.center {
+    width: 40px;
+    height: 40px;
+    background-color: brown;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* Animaciones */
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
